@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Frozfood Selera Jaya</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #fff8f0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #d62828;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin-left: 10px;
+        }
+
+        .nav-link:hover {
+            color: #ffd166 !important;
+        }
+
+        /* SEARCH */
+        .search-section {
+            background-color: #f77f00;
+            padding: 45px 20px;
+        }
+
+        .search-section h1 {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .search-box {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* PRODUK */
+        .product-section {
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-weight: bold;
+            color: #d62828;
+            margin-bottom: 35px;
+        }
+
+        .product-card {
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .product-card .card-body {
+            padding: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .product-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .price {
+            color: #d62828 !important;
+            font-size: 18px !important;
+            font-weight: bold;
+        }
+
+        .btn-tambah {
+            background-color: #f77f00;
+            color: white;
+            border: none;
+            width: 100%;
+            border-radius: 8px;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .btn-tambah:hover {
+            background-color: #d62828;
+            color: white;
+        }
+
+        /* KONTAK */
+        .contact-section {
+            background-color: #003049;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-weight: bold;
+        }
+
+        .contact-section a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #001d2e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            <i class="fa-solid fa-snowflake"></i>
+            Frozfood Selera Jaya
+        </a>
+
+        <button class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Beranda
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#Menu">
+                        Produk
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#Kontak">
+                        Kontak
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- ================= SEARCH BAR ================= -->
+<section class="search-section">
+
+    <h1>
+        Temukan Frozen Food Favoritmu!
+    </h1>
+
+    <div class="search-box">
+
+        <div class="input-group">
+
+            <span class="input-group-text">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+
+            <input
+                type="text"
+                class="form-control"
+                id="searchBar"
+                placeholder="Silakan cari produk yang kamu butuhkan">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUK ================= -->
+<section id="Menu" class="product-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            <i class="fa-solid fa-basket-shopping"></i>
+            Produk Kami
+        </h2>
+
+        <div class="row g-4">
+
+
+            <!-- NUGGET AYAM ORIGINAL -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="product-card">
+
+                    <img
+                        src="Nugget Ayam Original.jpeg"
+                        alt="Nugget Ayam Original Kanzler 450gr">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Nugget Ayam Original
+                        </h3>
+
+                        <p>
+                            Nugget Ayam Original Praktis dan cocok untuk bekal anak.
+                        </p>
+
+                        <p class="price">
+                            Rp50.000
+                        </p>
+
+                        <button class="btn btn-tambah">
+                            Tambah
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NUGGET AYAM PEDAS -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="product-card">
+
+                    <img
+                        src="Nugget Ayam Pedas.jpeg"
+                        alt="Nugget Ayam Pedas Kanzler 450gr">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Nugget Ayam Pedas
+                        </h3>
+
+                        <p>
+                            Nugget Ayam Pedas. Tidak terlalu Pedas bagi anak-anak,
+                            praktis dan cocok untuk bekal anak.
+                        </p>
+
+                        <p class="price">
+                            Rp50.000
+                        </p>
+
+                        <button class="btn btn-tambah">
+                            Tambah
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NUGGET SAPI -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="product-card">
+
+                    <img
+                        src="Nugget Sapi.jpeg"
+                        alt="Nugget Sapi Riverland 500gr">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Nugget Sapi
+                        </h3>
+
+                        <p>
+                            Nugget Sapi, cocok untuk bekal anak dan praktis.
+                        </p>
+
+                        <p class="price">
+                            Rp48.000
+                        </p>
+
+                        <button class="btn btn-tambah">
+                            Tambah
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOSIS AYAM -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="product-card">
+
+                    <img
+                        src="Sosis Ayam Ori.jpeg"
+                        alt="Sosis Ayam Premium So Good 300gr">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Sosis Ayam Premium
+                        </h3>
+
+                        <p>
+                            Sosis Ayam Premium. Praktis dan cocok untuk bekal anak.
+                        </p>
+
+                        <p class="price">
+                            Rp49.900
+                        </p>
+
+                        <button class="btn btn-tambah">
+                            Tambah
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOSIS AYAM KEJU PEDAS -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="product-card">
+
+                    <img
+                        src="Sosis Pedas.jpeg"
+                        alt="Sosis Ayam Pedas Miasso">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Sosis Ayam Keju Pedas
+                        </h3>
+
+                        <p>
+                            Sosis Ayam Keju Pedas. Cocok bagi yang suka rasa pedas,
+                            praktis dan cocok untuk bekal anak.
+                        </p>
+
+                        <p class="price">
+                            Rp79.000
+                        </p>
+
+                        <button class="btn btn-tambah">
+                            Tambah
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOSIS SAPI -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="product-card">
+
+                    <img
+                        src="Sosis Sapi.jpeg"
+                        alt="Sosis Sapi El Primo 500gr">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Sosis Sapi El Primo
+                        </h3>
+
+                        <p>
+                            Sosis sapi dengan sensasi "kress" tiap gigitan,
+                            praktis dan cocok untuk bekal anak.
+                        </p>
+
+                        <p class="price">
+                            Rp104.000
+                        </p>
+
+                        <button class="btn btn-tambah">
+                            Tambah
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BAKSO AYAM -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="product-card">
+
+                    <img
+                        src="Bakso Ayam.jpeg"
+                        alt="Bakso ayam Bernardi 360gr">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Bakso Ayam
+                        </h3>
+
+                        <p>
+                            Bakso ayam yang cocok sebagai <em>condiment</em>
+                            dalam sop. Cocok sebagai protein tambahan
+                            dalam bekal si kecil.
+                        </p>
+
+                        <p class="price">
+                            Rp65.500
+                        </p>
+
+                        <button class="btn btn-tambah">
+                            Tambah
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BAKSO SAPI -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="product-card">
+
+                    <img
+                        src="Bakso Sapi.jpeg"
+                        alt="Bakso sapi Son Haji Sony 350gr">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Bakso Sapi Son Haji Sony
+                        </h3>
+
+                        <p>
+                            Bakso sapi yang cocok sebagai <em>condiment</em>
+                            dalam sop. Cocok sebagai protein tambahan
+                            dalam bekal si kecil.
+                        </p>
+
+                        <p class="price">
+                            Rp80.000
+                        </p>
+
+                        <button class="btn btn-tambah">
+                            Tambah
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BAKSO IKAN -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="product-card">
+
+                    <img
+                        src="Bakso Ikan.jpeg"
+                        alt="Bakso ikan Teman Laut 500gr">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Bakso Ikan
+                        </h3>
+
+                        <p>
+                            Bakso ikan yang cocok sebagai <em>condiment</em>
+                            dalam sop atau tumisan. Cocok sebagai protein tambahan
+                            dalam bekal si kecil.
+                        </p>
+
+                        <p class="price">
+                            Rp30.000
+                        </p>
+
+                        <button class="btn btn-tambah">
+                            Tambah
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DIMSUM KEJU -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="product-card">
+
+                    <img
+                        src="Dimsum Keju.jpeg"
+                        alt="Dimsum Keju Its Friday">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Dimsum Keju Its Friday
+                        </h3>
+
+                        <p>
+                            Dimsum goreng keju viral dan cocok dijadikan
+                            kudapan saat kumpul dengan keluarga.
+                        </p>
+
+                        <p class="price">
+                            Rp75.000
+                        </p>
+
+                        <button class="btn btn-tambah">
+                            Tambah
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DIMSUM KULIT TAHU -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="product-card">
+
+                    <img
+                        src="Dimsum Kulit Tahu.jpeg"
+                        alt="Dimsum Kulit Tahu Mba Mimo 10pcs">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Dimsum Kulit Tahu
+                        </h3>
+
+                        <p>
+                            Dimsum kulit tahu, biasa disajikan dengan cara
+                            dikukus dan cocok dijadikan kudapan sehat
+                            saat kumpul dengan keluarga.
+                        </p>
+
+                        <p class="price">
+                            Rp26.000
+                        </p>
+
+                        <button class="btn btn-tambah">
+                            Tambah
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIOMAY -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="product-card">
+
+                    <img
+                        src="Siomay.jpeg"
+                        alt="Siomay Mba Mimo 10pcs">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Siomay Mba Mimo
+                        </h3>
+
+                        <p>
+                            Siomay, biasa disajikan dengan cara dikukus
+                            lalu dicocol dengan saus sambal atau kuah kacang
+                            dan cocok dijadikan kudapan saat kumpul dengan keluarga.
+                        </p>
+
+                        <p class="price">
+                            Rp26.000
+                        </p>
+
+                        <button class="btn btn-tambah">
+                            Tambah
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= KONTAK ================= -->
+<section id="Kontak" class="contact-section">
+
+    <div class="container">
+
+        <h2>
+            Hubungi Kami
+        </h2>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+6282184008085">
+                0821-8400-8085
+            </a>
+        </p>
+
+        <p>
+            <i class="fa-brands fa-whatsapp"></i>
+            Silakan hubungi admin untuk pemesanan.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+
+    <p>
+        &copy; 2026 Frozfood Selera Jaya
+    </p>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
